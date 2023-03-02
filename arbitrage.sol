@@ -61,7 +61,7 @@ contract MyContract {
         path[1] = WETH_ADDRESS;
         uint256[] memory amounts_1 = sushiswapRouter.swapExactTokensForTokens(amountOut,0, path, msg.sender, block.timestamp);
         uint256 amountOut_1 = amounts_1[1];
-        require(amountOut_1 > _amountIn , "Arbitage fail !");
+        require(amountOut_1 > _amountIn , "Arbitrage fail !");
         
     }
 }
