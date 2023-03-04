@@ -55,7 +55,7 @@ contract MyContract {
         // Get the amount of tokens received
         uint256[] memory amounts = uniswapRouter.swapExactTokensForTokens(_amountIn, 0, path, address(this), block.timestamp);
         uint256 amountOut = amounts[1];
-
+        // Sell the token on Sushiswap with _address
         IWETH9(_address).approve(address(SUSHISWAP_ROUTER_ADDRESS) ,amountOut); 
         path[0] = _address;
         path[1] = WETH_ADDRESS;
